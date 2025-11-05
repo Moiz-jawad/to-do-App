@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo app</title>
-</head>
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<body>
-    <div class="table-container">
-        <h1 class="todo title"></h1>
-        <div>
-            <a class="btn" href="">add todo</a>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body class="bg-light py-5">
+    <div class="container">
+      <div class="card shadow-sm p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="h3 text-primary mb-0">Todo List</h1>
+          <a href="/add-todo" class="btn btn-primary">Add Todo</a>
         </div>
-        <br />
 
-        <table>
-            <tr>
-                <td>title</td>
-                <td>description</td>
-                <td>created at</td>
-                <td>updated at </td>
-                <td>Action </td>
-            </tr>
-            <tr>
-                <td>todo title</td>
-                <td>todo description</td>
-                <td>created time</td>
-                <td>updated time </td>
-                <td>
-                    <a class="btn" href="">Edit </a>
-                    <a class="btn" href="">Delete</a>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Updated At</th>
+                <th scope="col" class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Todo Title</td>
+                <td>Todo Description</td>
+                <td>Created Time</td>
+                <td>Updated Time</td>
+                <td class="text-center">
+                  <a href="/update-todo" class="btn btn-sm btn-warning me-2"
+                    >Edit</a
+                  >
+                  <a href="/delete-todo" class="btn btn-sm btn-danger"
+                    >Delete</a
+                  >
                 </td>
-            </tr>
-        </table>
-
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
-</body>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
