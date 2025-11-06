@@ -35,19 +35,32 @@
             </thead>
             <tbody>
               <tr>
-                <td>Todo Title</td>
-                <td>Todo Description</td>
-                <td>Created Time</td>
-                <td>Updated Time</td>
+                <% for(let i =0; i < todos.length; i++){ %>
+
+                <td><%= todos[i].title %></td>
+                <td><%= todos[i].desc %></td>
+                <td>
+                  <%= moment(todos[i].createdAt).format("MMM/DD/YYYY HH:MM:SS")
+                  %>
+                </td>
+                <td>
+                  <%= moment(todos[i].updatedAt).format("MMM/DD/YYYY HH:MM:SS")
+                  %>
+                </td>
                 <td class="text-center">
-                  <a href="/update-todo" class="btn btn-sm btn-warning me-2"
+                  <a
+                    href="/update-todo?id=<%= todos[i]._id %>"
+                    class="btn btn-sm btn-warning me-2"
                     >Edit</a
                   >
-                  <a href="/delete-todo" class="btn btn-sm btn-danger"
+                  <a
+                    href="/delete-todo?id=<%= todos[i]._id %>"
+                    class="btn btn-sm btn-danger"
                     >Delete</a
                   >
                 </td>
               </tr>
+              <% }%>
             </tbody>
           </table>
         </div>
