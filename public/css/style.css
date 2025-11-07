@@ -1,0 +1,183 @@
+/* =====(Global Styles)===== */
+
+body {
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== Card (Main Container) ===== */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Title ===== */
+h1 {
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5a67d8, #667eea);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #667eea, #5a67d8);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f6c270, #f4b400);
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(244, 180, 0, 0.35);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    border: none;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(229, 62, 62, 0.35);
+}
+
+/* ===== Table ===== */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #f1f3f6;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    transition: all 0.25s ease;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.01);
+    background-color: #fafafa;
+}
+
+/* ===== Parallax subtle movement ===== */
+@keyframes subtle-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #ffffff, #f4f4f9);
+    animation: subtle-move 20s infinite linear alternate;
+    background-size: 200% 200%;
+}
+
+/* ===== Responsiveness ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== Delete Card Style ===== */
+.delete-card {
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.delete-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.delete-icon i {
+    font-size: 3rem;
+    color: #e63946;
+    animation: pulse 2s infinite;
+}
+
+/* Button hover lift */
+.delete-card .btn {
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.delete-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
